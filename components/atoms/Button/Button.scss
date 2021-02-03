@@ -1,6 +1,6 @@
 .n-button {
   @include hover-effect($opacity: .36);
-  padding: 17px 24px 15px 24px;
+  padding: 16px 24px;
   font-size: 18px;
 
   &--primary {
