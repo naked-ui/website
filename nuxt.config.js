@@ -50,10 +50,17 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/style-resources',
   ],
+
   robots: {
     UserAgent: '*',
     Disallow: '/'
   },
+
+  sitemap: {
+    hostname: 'https://naked-ui.org',
+    gzip: true
+  },
+
   styleResources: {
     scss: [
       '~/node_modules/sxcss/index.scss'
