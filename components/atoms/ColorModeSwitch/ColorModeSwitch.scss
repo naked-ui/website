@@ -1,0 +1,7 @@
+.color-mode-switch {
+
+  &__icon {
+    cursor: pointer;
+    @include size(20px);
+  }
+}

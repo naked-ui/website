@@ -1,0 +1,31 @@
+:root {
+  --black: #111;
+  --white: #fff;
+  --feather: #fafafa;
+  --grey: #8D8D8D;
+  --light-grey: #C6C6C6;
+  --dark-grey: #4D4D4D;
+  --danger: #DA1E28;
+  --danger-dark: #BA1B23;
+  --success: #24CD7C;
+  --info: #3375FF;
+  --warning: #FFD029;
+}
+
+.dark-mode {
+  --black: #eee;
+  --white: #111;
+  --feather: #050505;
+}
+
+$black: var(--black);
+$white: var(--white);
+$feather: var(--feather);
+$grey: var(--grey);
+$light-grey: var(--light-grey);
+$dark-grey: var(--dark-grey);
+$danger: var(--danger);
+$danger-dark: var(--danger-dark);
+$success: var(--success);
+$info: var(--info);
+$warning: var(--warning);
