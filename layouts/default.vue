@@ -5,6 +5,10 @@
   </div>
 </template>
 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+</style> 
+
 <style lang="scss">
 @import '~/styles/color-mode.scss';
 
@@ -37,6 +41,7 @@ html {
 body {
   background-color: $white;
   color: $black;
+  overflow: hidden;
 }
 
 .color-mode-switch {
@@ -44,12 +49,4 @@ body {
   right: 24px;
   bottom: 24px;
 }
-
-// #__layout {
-//   min-height: 100vh;
-
-//   #viewport {
-//     height: 100%;
-//   }
-// }
 </style>

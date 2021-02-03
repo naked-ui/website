@@ -12,10 +12,16 @@ export default {}
 
 <style lang="scss">
 .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
   @include flex($place: center);
-  min-height: 100vh;
 }
 .title {
+  padding: 0 32px;
+  text-align: center;
   font: 800 8vw/48px 'Inter';
   letter-spacing: -0.4vw;
   @include media('<=ms') {
