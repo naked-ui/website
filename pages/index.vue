@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-      <h1 class="title">
-        Naked UI
-      </h1>
+    <Logo />
   </div>
 </template>
 
@@ -19,7 +17,7 @@ export default {}
   width: 100%;
   @include flex($place: center);
 }
-.title {
+.logo {
   padding: 0 32px;
   text-align: center;
   font: 800 8vw/48px 'Inter';
