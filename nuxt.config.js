@@ -63,7 +63,8 @@ export default {
 
   styleResources: {
     scss: [
-      '~/node_modules/sxcss/index.scss'
+      '~/node_modules/sxcss/index.scss',
+      '~/styles/global/**.scss'
     ]
   },
 

@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@naked-ui/vue": "^0.1.2",
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/color-mode": "^2.0.3",
     "@nuxtjs/device": "^2.0.0",

@@ -1,0 +1,15 @@
+.n-button {
+  @include hover-effect($opacity: .36);
+  padding: 17px 24px 15px 24px;
+  font-size: 18px;
+
+  &--primary {
+    outline: 2px solid $black;
+    outline-offset: -2px;
+
+    .n-button__text {
+      color: $black;
+      font-weight: 600;
+    }
+  }
+}
