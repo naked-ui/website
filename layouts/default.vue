@@ -7,9 +7,7 @@
 
 <style lang="scss">
 @import 'sxcss/reset';
-// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap');
 @import '~/styles/fonts.css';
-// @import '~/styles/color-mode.scss';
 
 html {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

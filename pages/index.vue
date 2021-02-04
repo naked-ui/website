@@ -5,16 +5,18 @@
   >
     <div class="hero">
       <Logo
-        size="72"
+        :size="68"
       />
       <div class="hero__cta">
         <Button
+          class="hero__cta-link"
           link="https://docs.naked-ui.org"
           target="_blank"
         >
           Read documentation
         </Button>
         <Button
+          class="hero__cta-link"
           link="https://github.com/naked-ui"
           target="_blank"
         >
@@ -56,10 +58,34 @@ export default {
   
     &__cta {
       margin-top: 48px;
-      @include flex($place: center);
-      gap: 24px;
-      @include media('<=ms') {
-        flex-direction: column;
+      
+      @supports (display: grid) {
+        display: grid;
+        grid-gap: 24px;
+        justify-items: center;
+        align-items: center;
+        @include media('>md') {
+          grid-template-columns: repeat(2, auto);
+        }
+      }
+
+      @supports not (display: grid) {
+        @include flex($place: center);
+        @include media('<=ms') {
+          flex-direction: column;
+        }
+
+        .hero__cta-link {
+          @include media('>ms') {
+            margin-right: 24px;
+          }
+          @include media('<=ms') {
+            margin-bottom: 24px;
+          }
+          &:last-child {
+            margin: 0;
+          }
+        }
       }
     }
   }
