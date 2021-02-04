@@ -40,4 +40,8 @@ body {
   right: 24px;
   bottom: 24px;
 }
+
+a {
+  @include hover-effect;
+}
 </style>

@@ -40,7 +40,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxtjs/fontawesome'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -68,6 +69,12 @@ export default {
       '~/node_modules/sxcss/index.scss',
       '~/styles/global/**.scss'
     ]
+  },
+
+  fontawesome: {
+    icons: {
+      brands: ['faGithub']
+    }
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
