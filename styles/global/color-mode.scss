@@ -1,16 +1,18 @@
-:root {
-  --black: #111;
-  --white: #fff;
-  --feather: #fafafa;
-  --grey: #8D8D8D;
-  --light-grey: #C6C6C6;
-  --dark-grey: #4D4D4D;
-  --danger: #DA1E28;
-  --danger-dark: #BA1B23;
-  --success: #24CD7C;
-  --info: #3375FF;
-  --warning: #FFD029;
-}
+@import '~/packages/css/reset.scss';
+
+// :root {
+//   --black: #111;
+//   --white: #fff;
+//   --feather: #fafafa;
+//   --grey: #8D8D8D;
+//   --light-grey: #C6C6C6;
+//   --dark-grey: #4D4D4D;
+//   --danger: #DA1E28;
+//   --danger-dark: #BA1B23;
+//   --success: #24CD7C;
+//   --info: #3375FF;
+//   --warning: #FFD029;
+// }
 
 .dark-mode {
   --black: #eee;

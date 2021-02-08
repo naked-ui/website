@@ -8,10 +8,8 @@
 <style lang="scss">
 @import '~/styles/main.scss';
 
-$black: var(--black);
-
 .test-page {
-  background-color: var(--black);
+  background-color: var(--grey);
   padding: 24px;
 
   &__inner {

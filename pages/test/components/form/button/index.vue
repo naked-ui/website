@@ -21,3 +21,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.test-page {
+
+  &__content {
+    padding: 16px;
+  }
+}
+</style>
