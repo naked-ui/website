@@ -18,3 +18,4 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export { nButton } from './components/nButton'
 export { nCarousel, nCarouselItem } from './components/nCarousel'
+export { nOverflowCarousel, nOverflowCarouselItem } from './components/nOverflowCarousel'

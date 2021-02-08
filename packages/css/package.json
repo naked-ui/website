@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/naked-ui/css/issues"
   },
-  "homepage": "https://github.com/naked-ui/css#readme"
+  "homepage": "https://github.com/naked-ui/css#readme",
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "sass-loader": "^10.1.0",
+    "sxcss": "^1.3.2"
+  }
 }

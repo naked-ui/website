@@ -1,25 +1,27 @@
 <template>
   <div
+    :data-name-prefix="namePrefix"
+    :style="` --name-prefix: ${namePrefix};`"
     :class="componentClasses"
     :paginationEnabled="paginationEnabled"
   >
-    <div class="nui-carousel__viewport-wrapper">
-      <div class="nui-carousel__viewport">
+    <div class="carousel__viewport-wrapper">
+      <div class="carousel__viewport">
         <slot />
       </div>
     </div>
     <aside
-      v-if="paginationEnabled"
-      class="nui-carousel__pagination"
+      v-if="paginationIsAvailable && paginationEnabled"
+      class="carousel__pagination"
     >
-      <ol class="nui-carousel__pagination-list">
+      <ol class="carousel__pagination-list">
         <li
           v-for="(item, index) in paginationItems"
           :key="index"
-          class="nui-carousel__pagination-item">
+          class="carousel__pagination-item">
           <a
-            :href="`#${refName}--${index}`"
-            class="nui-carousel__pagination-button"
+            :href="`#${refName}--${index + 1}`"
+            class="carousel__pagination-button"
           >Go to slide {{ index }}</a>
         </li>
       </ol>
@@ -36,7 +38,7 @@ export default {
   mixins: [carouselNavigation, namePrefixMixin],
   props: { 
     paginationItems: {
-      type: Array,
+      type: [Array, Number],
       required: true
     },
     paginationEnabled: {
@@ -50,18 +52,28 @@ export default {
     },
     kind: {
       type: String,
-      default: undefined
+      default: 'slider'
+    },
+    autoplay: { // TO DO
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     componentClasses () {
       return [
-        `${this.namePrefix}carousel`,
-        this.kind === 'overflow' && `${this.namePrefix}carousel--overflow`,
-        this.kind === 'overflow-desktop' && `${this.namePrefix}carousel--overflow-desktop`,
-        this.kind === 'overflow-tablet' && `${this.namePrefix}carousel--overflow-tablet`,
-        this.kind === 'overflow-mobile' && `${this.namePrefix}carousel--overflow-mobile`,
+        `carousel`,
+        this.kind === 'slider' && `carousel--slider`,
+        this.kind === 'overflow' && `carousel--overflow`,
+        this.kind === 'overflow-desktop' && `carousel--overflow-desktop`,
+        this.kind === 'overflow-tablet' && `carousel--overflow-tablet`,
+        this.kind === 'overflow-mobile' && `carousel--overflow-mobile`
       ]
+    },
+    paginationIsAvailable () {
+      if (this.kind === 'overflow' || this.kind === 'overflow-desktop' || this.kind === 'overflow-tablet' || this.kind === 'overflow-mobile') {
+        return false
+      } else return true
     }
   },
   methods: {
@@ -74,3 +86,5 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" src="./nCarousel.scss" />

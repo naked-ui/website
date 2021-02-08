@@ -1,20 +1,10 @@
 <template>
   <li
-    :class="[`carousel__item`]"
+    :class="[`overflow-carousel__item`]"
     :tabindex="slideIndex"
     :id="`${refName}--${slideIndex}`"
   >
-    <div :class="[`carousel__navigation`]">
-      <a
-        :href="`#${refName}--${prevSlide(slideIndex)}`"
-        :class="[`carousel__prev`]"
-      />
-      <a
-        :href="`#${refName}--${nextSlide(slideIndex)}`"
-        :class="[`carousel__next`]"
-      />
-    </div>
-    <div :class="[`carousel__item-content`]">
+    <div :class="[`overflow-carousel__item-content`]">
       <slot />
     </div>
   </li>
@@ -25,7 +15,7 @@ import carouselNavigation from './logic/carouselNavigation'
 import namePrefixMixin from '~/packages/naked-ui/src/utils/namePrefix'
 
 export default {
-  name: 'nCarouselItem',
+  name: 'nOverflowCarouselItem',
   mixins: [carouselNavigation, namePrefixMixin],
   props: {
     slideIndex: {
