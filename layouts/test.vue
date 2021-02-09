@@ -9,11 +9,11 @@
 @import '~/styles/main.scss';
 
 .test-page {
-  background-color: var(--grey);
+  background-color: var(--nui-color-grey);
   padding: 24px;
 
   &__inner {
-    background-color: var(--white);
+    background-color: var(--nui-color-white);
     min-height: calc(100vh - 48px);
   }
 

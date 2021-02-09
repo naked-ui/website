@@ -1,14 +1,13 @@
 .button {
-  @include hover-effect($opacity: .36);
   padding: 16px 24px;
   font-size: 18px;
 
   &--primary {
-    outline: 2px solid var(--black);
+    outline: 2px solid var(--nui-color-black);
     outline-offset: -2px;
 
     .button__text {
-      color: var(--black);
+      color: var(--nui-color-black);
       font-weight: 600;
     }
   }

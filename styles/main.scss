@@ -20,11 +20,11 @@ html {
 }
 
 body {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--nui-color-white);
+  color: var(--nui-color-black);
   overflow: hidden;
 }
 
-a {
-  @include hover-effect;
-}
+// a {
+//   @include hover-effect;
+// }

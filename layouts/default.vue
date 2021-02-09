@@ -28,8 +28,8 @@ html {
 }
 
 body {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--nui-color-white);
+  color: var(--nui-color-black);
   overflow: hidden;
 }
 
@@ -37,9 +37,5 @@ body {
   position: fixed;
   right: 40px;
   bottom: 40px;
-}
-
-a {
-  @include hover-effect;
 }
 </style>
