@@ -12,7 +12,8 @@
 </template>
 
 <script>
-import { nButton } from '~/packages/@naked-ui/vue/src/main.js'
+import { nButton } from '@naked-ui/vue'
+// import { nButton } from '~/packages/@naked-ui/vue/src/main.js'
 
 export default {
   layout: 'test',
