@@ -1,0 +1,6 @@
+[submodule "packages/@naked-ui/vue"]
+	path = packages/@naked-ui/vue
+	url = git@github.com:naked-ui/vue.git
+[submodule "packages/@naked-ui/css"]
+	path = packages/@naked-ui/css
+	url = git@github.com:naked-ui/css.git
