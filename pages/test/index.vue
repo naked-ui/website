@@ -4,19 +4,19 @@
       <h2>Carousel</h2>
       <div class="sub-section">
         <h3>Slider Carousel</h3>
-        <nCarousel
+        <nSliderCarousel
           :paginationItems="carouselItems"
           :refName="'slider-carousel'"
         >
-          <nCarouselItem
+          <nSliderCarouselItem
             v-for="(item, index) in carouselItems"
             :key="index"
             :slideIndex="index"
             :refName="'slider-carousel'"
           >
             {{ `Slider Carousel Item ${index}` }}
-          </nCarouselItem>
-        </nCarousel>
+          </nSliderCarouselItem>
+        </nSliderCarousel>
       </div>
       <div class="sub-section">
         <h3>Overflow List</h3>
@@ -38,15 +38,15 @@
 </template>
 
 <script>
-import { nButton } from '~/packages/naked-ui/src/main'
-import { nCarousel, nCarouselItem } from '~/packages/naked-ui/src/main'
-import { nOverflowCarousel, nOverflowCarouselItem } from '~/packages/naked-ui/src/main'
+import { nButton } from '~/packages/@naked-ui/vue/src/main.js'
+import { nSliderCarousel, nSliderCarouselItem } from '~/packages/@naked-ui/vue/src/main.js'
+import { nOverflowCarousel, nOverflowCarouselItem } from '~/packages/@naked-ui/vue/src/main.js'
 
 export default {
   components: {
     nButton,
-    nCarousel,
-    nCarouselItem,
+    nSliderCarousel,
+    nSliderCarouselItem,
     nOverflowCarousel,
     nOverflowCarouselItem
   },

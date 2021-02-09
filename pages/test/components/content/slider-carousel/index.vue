@@ -4,39 +4,53 @@
       <h1>Slider Carousel</h1>
     </header>
     <section class="test-page__content">
-      <nCarousel
+      <nSliderCarousel
         :paginationItems="carouselItems"
         :refName="'slider-carousel'"
       >
-        <nCarouselItem
+        <nSliderCarouselItem
           v-for="(item, index) in carouselItems"
           :key="index"
           :slideIndex="index + 1"
           :refName="'slider-carousel'"
         >
           {{ `Item ${index + 1}` }}
-        </nCarouselItem>
-      </nCarousel>
+        </nSliderCarouselItem>
+      </nSliderCarousel>
     </section>
   </article>
 </template>
 
 <script>
-import { nButton } from '~/packages/naked-ui/src/main'
-import { nCarousel, nCarouselItem } from '~/packages/naked-ui/src/main'
-import { nOverflowCarousel, nOverflowCarouselItem } from '~/packages/naked-ui/src/main'
+import { nSliderCarousel, nSliderCarouselItem } from '~/packages/@naked-ui/vue/src/main.js'
 
 export default {
   layout: 'test',
   components: {
-    nCarousel,
-    nCarouselItem,
+    nSliderCarousel,
+    nSliderCarouselItem,
   },
   data () {
     return {
       carouselItems: 16
-      // carouselItems: 12
     }
   },
 }
 </script>
+
+<style lang="scss">
+.slider-carousel {
+
+  &__item {
+    @include flex($place: center);
+    background-color: #bbb;
+
+    &-content {
+      @include flex($place: center);
+      text-align: center;
+      font: 700 24px/32px -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      color: car(--black) !important;
+    }
+  }
+}
+</style>

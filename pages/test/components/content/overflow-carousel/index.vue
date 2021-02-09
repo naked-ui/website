@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { nOverflowCarousel, nOverflowCarouselItem } from '~/packages/naked-ui/src/main'
+import { nOverflowCarousel, nOverflowCarouselItem } from '~/packages/@naked-ui/vue/src/main.js'
 
 export default {
   layout: 'test',
@@ -38,3 +38,20 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.overflow-carousel {
+
+  &__item {
+    @include flex($place: center);
+    background-color: #bbb;
+  }
+
+  &__content {
+    @include flex($place: center);
+    text-align: center;
+    font: 700 24px/32px -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    color: car(--black) !important;
+  }
+}
+</style>
