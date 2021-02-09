@@ -28,6 +28,17 @@
             />
           <!-- </template> -->
         </Button>
+        <!-- <Button
+          class="hero__cta-link"
+          link="https://npmjs.com/naked-ui"
+          target="_blank"
+        >
+          Download from NPM
+          <FontAwesomeIcon
+            :icon="faNpm"
+            class="icon-npm"
+          />
+        </Button> -->
       </div>
     </div>
   </div>
@@ -35,11 +46,15 @@
 
 <script>
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faNpm } from '@fortawesome/free-brands-svg-icons'
 
 export default {
   computed: {
     faGithub () {
        return faGithub
+    },
+    faNpm () {
+       return faNpm
     }
   } 
 }
@@ -65,7 +80,7 @@ export default {
         justify-items: center;
         align-items: center;
         @include media('>md') {
-          grid-template-columns: repeat(2, auto);
+          grid-template-columns: repeat(3, auto);
         }
       }
 
@@ -99,11 +114,15 @@ export default {
     }
   }
   
-  .n-button {
+  .button {
 
-    .icon-github {
-      font-size: 18px !important;
+    .svg-inline--fa {
+      font-size: 20px !important;
       margin-left: 8px;
+    }
+
+    .fa-npm {
+      transform: translateY(2px) !important;
     }
   }
 }

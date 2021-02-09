@@ -73,7 +73,10 @@ export default {
 
   fontawesome: {
     icons: {
-      brands: ['faGithub']
+      brands: [
+        'faGithub',
+        'faNpm'
+      ]
     }
   },
 

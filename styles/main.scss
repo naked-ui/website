@@ -1,4 +1,5 @@
 @import 'sxcss/reset';
+@import '@naked-ui/css';
 @import '~/styles/fonts.css';
 
 html {
@@ -25,6 +26,6 @@ body {
   overflow: hidden;
 }
 
-// a {
-//   @include hover-effect;
-// }
+a {
+  @include hover-effect;
+}

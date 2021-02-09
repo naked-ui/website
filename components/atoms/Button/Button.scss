@@ -1,14 +1,12 @@
-.button {
-  padding: 16px 24px;
-  font-size: 18px;
+[data-name-prefix="nui"].button {
 
   &--primary {
+    background-color: transparent;
     outline: 2px solid var(--nui-color-black);
     outline-offset: -2px;
 
     .button__text {
       color: var(--nui-color-black);
-      font-weight: 600;
     }
   }
 }
