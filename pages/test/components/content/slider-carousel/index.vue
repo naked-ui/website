@@ -22,6 +22,7 @@
 </template>
 
 <script>
+// import { nSliderCarousel, nSliderCarouselItem } from '@naked-ui/vue'
 import { nSliderCarousel, nSliderCarouselItem } from '~/packages/@naked-ui/vue/src/main.js'
 
 export default {
@@ -43,13 +44,13 @@ export default {
 
   &__item {
     @include flex($place: center);
-    background-color: #bbb;
+    background-color: var(--nui-color-grey);
 
     &-content {
       @include flex($place: center);
       text-align: center;
       font: 700 24px/32px -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-      color: car(--black) !important;
+      color: var(--nui-color-black) !important;
     }
   }
 }

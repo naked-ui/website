@@ -44,14 +44,14 @@ export default {
 
   &__item {
     @include flex($place: center);
-    background-color: #bbb;
-  }
+    background-color: var(--nui-color-grey);
 
-  &__content {
-    @include flex($place: center);
-    text-align: center;
-    font: 700 24px/32px -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    color: car(--black) !important;
+    &-content {
+      @include flex($place: center);
+      text-align: center;
+      font: 700 24px/32px -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      color: var(--nui-color-black) !important;
+    }
   }
 }
 </style>

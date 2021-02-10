@@ -21,14 +21,15 @@ export default {
       { name: 'og:image', content: '/naked-ui-og-image.jpg' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      // { link: 'https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700;800;900&display=swap', rel: 'stylesheet' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'sxcss/reset.css',
+    '@naked-ui/css',
+    '~/styles/fonts.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -46,7 +47,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/device',
     '@nuxtjs/robots',

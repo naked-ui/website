@@ -1086,19 +1086,19 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@naked-ui/css@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@naked-ui/css/-/css-0.0.3.tgz#673b3fc99d4e09c971e0cc532c376941efbf2232"
-  integrity sha512-QPac/qHdmOECpa6VaRnsU3YUw5zKStoCLkZjAU39uKh1rnoXDW8p875qjXTMIQ1oJGqlMyZXJtFFSJiHZ81rxg==
+"@naked-ui/css@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@naked-ui/css/-/css-0.0.4.tgz#c85abb89fab6d5be417e5c7afcabf09fa96bae87"
+  integrity sha512-gPlFuzXaQeeoSckfailyuje7Ei/P4IGz3wApDTzK73Mk9KdH/OBDFaT+6phEORsb2rR/Y+7NCKNpeGCdh3ESRQ==
 
-"@naked-ui/vue@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@naked-ui/vue/-/vue-0.1.8.tgz#b5b94c46b103c5decd23fe8fcf7159213c6ddbd2"
-  integrity sha512-NeXYJqVlh9w4R+Gmhit9OlXjckf7j999zUFdeKx9h6MqNbMe4LqyA9e0KAIxIpdYNWgKFguUygQ2MN38JPgEEw==
+"@naked-ui/vue@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@naked-ui/vue/-/vue-0.1.10.tgz#8d19b5e42b17f3a00845a8ce8ef17bace5ea201f"
+  integrity sha512-/Wk5/Rp2Kbd2WqBF702qrl2DKpF3XtOjsuekxZssvMT1iVXRBt8izoVndKgdArLwmESlaLS4N7pwwtalSC7lzg==
   dependencies:
     babel-loader "^8.2.2"
     core-js "^3.8.1"
-    sxcss "^1.4.23"
+    sxcss "^1.4.24"
     vue "^2.6.12"
 
 "@nodelib/fs.scandir@2.1.4":
@@ -10699,10 +10699,23 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sxcss@^1.4.23:
-  version "1.4.23"
-  resolved "https://registry.yarnpkg.com/sxcss/-/sxcss-1.4.23.tgz#4b44cf9248e11c423decc33440ee029d71c7200a"
-  integrity sha512-sY0Dd+PBWwFmtlMXFwQp633Vla6nvSy8TCZPNIzjiHVOnbpgNBHszp9DrZD/9npfKf17ljV/WHupbvd+BzeEcw==
+sxcss@^1.4.24:
+  version "1.4.24"
+  resolved "https://registry.yarnpkg.com/sxcss/-/sxcss-1.4.24.tgz#a61b8a05e7e20c33aa84c4acb360772c3f4f4efc"
+  integrity sha512-SQpPAo4gDN31udX8oPAgoiM23FNhomnJ5E1Rn2TeDEs7oOWSxfsVnDHL6BpCBT91NDMeI9/aZhlI/uexBwU/YQ==
+  dependencies:
+    gulp "^4.0.2"
+    gulp-concat "^2.6.1"
+    gulp-remove-empty-lines "^0.1.0"
+    gulp-strip-css-comments "^2.0.0"
+    gulp-whitespace "^0.1.0"
+    node-sass "^4.12.0"
+    sass-loader "^7.1.0"
+
+sxcss@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/sxcss/-/sxcss-1.5.0.tgz#41c2da49dea7a9a6169e93e0c61d24e4d6b00701"
+  integrity sha512-03ztvWB08QFbV3M1fOJxD0W3z5ASm4ZJXFwUJGgAOk3r6NOG5RWLY55Es9tUR1+EpzOZVOP634TeqgV+eLpVbg==
   dependencies:
     gulp "^4.0.2"
     gulp-concat "^2.6.1"

@@ -5,37 +5,5 @@
   </div>
 </template>
 
-<style lang="scss">
-@import 'sxcss/reset';
-@import '~/styles/fonts.css';
+<style lang="scss" src="../styles/main.scss" />
 
-html {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-body {
-  background-color: var(--nui-color-white);
-  color: var(--nui-color-black);
-  overflow: hidden;
-}
-
-.color-mode-switch {
-  position: fixed;
-  right: 40px;
-  bottom: 40px;
-}
-</style>

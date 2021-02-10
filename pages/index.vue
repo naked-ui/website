@@ -21,12 +21,10 @@
           target="_blank"
         >
           See on GitHub
-          <!-- <template v-slot:button-icon--right> -->
-            <FontAwesomeIcon
-              :icon="faGithub"
-              class="icon-github"
-            />
-          <!-- </template> -->
+          <FontAwesomeIcon
+            :icon="faGithub"
+            class="icon-github"
+          />
         </Button>
         <!-- <Button
           class="hero__cta-link"

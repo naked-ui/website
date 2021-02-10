@@ -9,7 +9,7 @@
 @import '~/styles/main.scss';
 
 .test-page {
-  background-color: var(--nui-color-grey);
+  background-color: var(--nui-color-secondary);
   padding: 24px;
 
   &__inner {
