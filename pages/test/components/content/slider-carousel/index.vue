@@ -7,15 +7,21 @@
       <nSliderCarousel
         :paginationItems="carouselItems"
         :refName="'slider1-carousel'"
+        :infiniteScroll="false"
+        :slideIdDisabled="true"
+        :amountToScroll="2"
       >
+        <template #prevButton>PREV</template>
         <nSliderCarouselItem
           v-for="(item, index) in carouselItems"
           :key="index"
           :slideIndex="index + 1"
+          :visibleItems="3"
           :refName="'slider1-carousel'"
         >
           {{ `Item ${index + 1}` }}
         </nSliderCarouselItem>
+        <template #nextButton>NEXT</template>
       </nSliderCarousel>
     </section>
     <section class="test-page__content">
