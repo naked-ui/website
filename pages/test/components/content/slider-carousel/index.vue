@@ -6,13 +6,89 @@
     <section class="test-page__content">
       <nSliderCarousel
         :paginationItems="carouselItems"
-        :refName="'slider-carousel'"
+        :refName="'slider1-carousel'"
       >
         <nSliderCarouselItem
           v-for="(item, index) in carouselItems"
           :key="index"
           :slideIndex="index + 1"
-          :refName="'slider-carousel'"
+          :refName="'slider1-carousel'"
+        >
+          {{ `Item ${index + 1}` }}
+        </nSliderCarouselItem>
+      </nSliderCarousel>
+    </section>
+    <section class="test-page__content">
+      <nSliderCarousel
+        :paginationItems="carouselItems"
+        :refName="'slider2-carousel'"
+        navigationDisabled
+      >
+        <nSliderCarouselItem
+          v-for="(item, index) in carouselItems"
+          :key="index"
+          :slideIndex="index + 1"
+          :refName="'slider2-carousel'"
+        >
+          {{ `Item ${index + 1}` }}
+        </nSliderCarouselItem>
+      </nSliderCarousel>
+    </section>
+    <section class="test-page__content">
+      <nSliderCarousel
+        :paginationItems="carouselItems"
+        :refName="'slider3-carousel'"
+      >
+        <nSliderCarouselItem
+          v-for="(item, index) in carouselItems"
+          :key="index"
+          :slideIndex="index + 1"
+          :refName="'slider3-carousel'"
+        >
+          {{ `Item ${index + 1}` }}
+        </nSliderCarouselItem>
+      </nSliderCarousel>
+    </section>
+    <section class="test-page__content">
+      <nSliderCarousel
+        :paginationItems="carouselItems"
+        :refName="'slider4-carousel'"
+      >
+        <nSliderCarouselItem
+          v-for="(item, index) in carouselItems"
+          :key="index"
+          :slideIndex="index + 1"
+          :refName="'slider4-carousel'"
+        >
+          {{ `Item ${index + 1}` }}
+        </nSliderCarouselItem>
+      </nSliderCarousel>
+    </section>
+    <section class="test-page__content">
+      <nSliderCarousel
+        :paginationItems="carouselItems"
+        :refName="'slider5-carousel'"
+      >
+        <nSliderCarouselItem
+          v-for="(item, index) in carouselItems"
+          :key="index"
+          :slideIndex="index + 1"
+          :refName="'slider5-carousel'"
+        >
+          {{ `Item ${index + 1}` }}
+        </nSliderCarouselItem>
+      </nSliderCarousel>
+    </section>
+    <section class="test-page__content">
+      <nSliderCarousel
+        :paginationItems="carouselItems"
+        :refName="'slider6-carousel'"
+      >
+        <nSliderCarouselItem
+          v-for="(item, index) in carouselItems"
+          :key="index"
+          :slideIndex="index + 1"
+          :refName="'slider6-carousel'"
         >
           {{ `Item ${index + 1}` }}
         </nSliderCarouselItem>
