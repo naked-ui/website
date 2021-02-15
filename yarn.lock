@@ -1086,19 +1086,20 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@naked-ui/css@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@naked-ui/css/-/css-0.0.4.tgz#c85abb89fab6d5be417e5c7afcabf09fa96bae87"
-  integrity sha512-gPlFuzXaQeeoSckfailyuje7Ei/P4IGz3wApDTzK73Mk9KdH/OBDFaT+6phEORsb2rR/Y+7NCKNpeGCdh3ESRQ==
+"@naked-ui/css@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@naked-ui/css/-/css-0.0.7.tgz#9ed0f74d6a7bdee3c407794359948be93d9ca19c"
+  integrity sha512-nz7OMHOVrAF3TWCSgSZ4AgNi1bRUg0TfLq2JpHmws6PGs/LvrsQr2DwqwtIbjN1vAX4ZP1kPggoWgDey0tC7Hg==
 
-"@naked-ui/vue@^0.1.10":
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/@naked-ui/vue/-/vue-0.1.10.tgz#8d19b5e42b17f3a00845a8ce8ef17bace5ea201f"
-  integrity sha512-/Wk5/Rp2Kbd2WqBF702qrl2DKpF3XtOjsuekxZssvMT1iVXRBt8izoVndKgdArLwmESlaLS4N7pwwtalSC7lzg==
+"@naked-ui/vue@^0.1.12":
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/@naked-ui/vue/-/vue-0.1.12.tgz#eeeaba7b4c03b30350abe418d764ff22745d8826"
+  integrity sha512-IP4xDgjsTYchbYAse21szydUsQuMbfzB74HZAeII4DXB9tM6GQQGD8LNC3KjZeIE6k7d5rm3BOh8C2HlNVaqLQ==
   dependencies:
     babel-loader "^8.2.2"
     core-js "^3.8.1"
-    sxcss "^1.4.24"
+    smoothscroll-polyfill "^0.4.4"
+    sxcss "^1.5.2"
     vue "^2.6.12"
 
 "@nodelib/fs.scandir@2.1.4":
@@ -10184,6 +10185,11 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
+smoothscroll-polyfill@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/smoothscroll-polyfill/-/smoothscroll-polyfill-0.4.4.tgz#3a259131dc6930e6ca80003e1cb03b603b69abf8"
+  integrity sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg==
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
@@ -10699,23 +10705,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sxcss@^1.4.24:
-  version "1.4.24"
-  resolved "https://registry.yarnpkg.com/sxcss/-/sxcss-1.4.24.tgz#a61b8a05e7e20c33aa84c4acb360772c3f4f4efc"
-  integrity sha512-SQpPAo4gDN31udX8oPAgoiM23FNhomnJ5E1Rn2TeDEs7oOWSxfsVnDHL6BpCBT91NDMeI9/aZhlI/uexBwU/YQ==
-  dependencies:
-    gulp "^4.0.2"
-    gulp-concat "^2.6.1"
-    gulp-remove-empty-lines "^0.1.0"
-    gulp-strip-css-comments "^2.0.0"
-    gulp-whitespace "^0.1.0"
-    node-sass "^4.12.0"
-    sass-loader "^7.1.0"
-
-sxcss@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/sxcss/-/sxcss-1.5.0.tgz#41c2da49dea7a9a6169e93e0c61d24e4d6b00701"
-  integrity sha512-03ztvWB08QFbV3M1fOJxD0W3z5ASm4ZJXFwUJGgAOk3r6NOG5RWLY55Es9tUR1+EpzOZVOP634TeqgV+eLpVbg==
+sxcss@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/sxcss/-/sxcss-1.5.2.tgz#c0edf23330f9c942ba27bd295fa10189c3a6394e"
+  integrity sha512-6Rqf6fAZFYdwffZx/HYigp1pRVUV2rKJTtlrj066RpkdYqW59nPaEKjZFuxehRpmCadl3LgS9L4HLBs7/dbg5g==
   dependencies:
     gulp "^4.0.2"
     gulp-concat "^2.6.1"
