@@ -6,13 +6,49 @@
     <section class="test-page__content">
       <nOverflowCarousel
         :paginationItems="carouselItems"
-        :refName="'overflow-carousel'"
+        itemsGap="20px"
+        viewportPadding="20px"
       >
         <nOverflowCarouselItem
           v-for="(item, index) in carouselItems"
           :key="index"
           :slideIndex="index + 1"
-          :refName="'overflow-carousel'"
+          width="300px"
+          height="300px"
+        >
+          {{ `Item ${index + 1}` }}
+        </nOverflowCarouselItem>
+      </nOverflowCarousel>
+
+      <br>
+
+      <nOverflowCarousel
+        :paginationItems="carouselItems"
+      >
+        <nOverflowCarouselItem
+          v-for="(item, index) in carouselItems"
+          :key="index"
+          :slideIndex="index + 1"
+          width="200px"
+          height="200px"
+        >
+          {{ `Item ${index + 1}` }}
+        </nOverflowCarouselItem>
+      </nOverflowCarousel>
+
+      <br>
+
+      <nOverflowCarousel
+        :paginationItems="carouselItems"
+        itemsGap="40px"
+        viewportPadding="20px"
+      >
+        <nOverflowCarouselItem
+          v-for="(item, index) in carouselItems"
+          :key="index"
+          :slideIndex="index + 1"
+          width="400px"
+          height="400px"
         >
           {{ `Item ${index + 1}` }}
         </nOverflowCarouselItem>

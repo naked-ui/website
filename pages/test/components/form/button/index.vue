@@ -30,4 +30,30 @@ export default {
     padding: 16px;
   }
 }
+
+[data-name-prefix="nui"] {
+
+  &.button {
+    @include hover-effect($opacity: .36);
+    padding: 16px 24px;
+    font-size: 18px;
+  }
+
+  &.button--primary {
+    background-color: var(--nui-color-primary);
+
+    .button__text {
+      color: var(--nui-color-white);
+    }
+  }
+
+  &.button--secondary {
+    background-color: var(--nui-color-secondary);
+
+    .button__text {
+      color: var(--nui-color-black);
+    }
+  }
+}
+
 </style>
