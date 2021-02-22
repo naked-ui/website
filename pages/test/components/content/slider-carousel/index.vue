@@ -5,16 +5,16 @@
       <h1>Slider Carousel</h1>
     </header>
 
-    <section class="test-page__content">
+    <!-- <section class="test-page__content">
       <nSliderCarousel
-        :paginationItems="carouselItems"
+        :paginationItems="carouselItems1"
         :refName="'slider1-carousel'"
         :infiniteScroll="false"
         :amountToScroll="2"
       >
         <template v-slot:prev-button>Custom prev</template>
         <nSliderCarouselItem
-          v-for="(item, index) in carouselItems"
+          v-for="(item, index) in carouselItems1"
           :key="index"
           :slideIndex="index + 1"
           :visibleItems="3"
@@ -28,12 +28,12 @@
 
     <section class="test-page__content">
       <nSliderCarousel
-        :paginationItems="carouselItems"
+        :paginationItems="carouselItems2"
         :refName="'slider2-carousel'"
         navigationDisabled
       >
         <nSliderCarouselItem
-          v-for="(item, index) in carouselItems"
+          v-for="(item, index) in carouselItems2"
           :key="index"
           :slideIndex="index + 1"
           :refName="'slider2-carousel'"
@@ -41,21 +41,22 @@
           {{ `Item ${index + 1}` }}
         </nSliderCarouselItem>
       </nSliderCarousel>
-    </section>
+    </section> -->
 
     <section class="test-page__content">
       <nSliderCarousel
-        :paginationItems="carouselItems"
-        :refName="'slider3-carousel'"
-        :slideIdEnabled="true"
+        :paginationItems="carouselItems3"
+        :refName="'slider-carousel3'"
+        :loopItems="true"
+        :infiniteScroll="true"
       >
         <nSliderCarouselItem
-          v-for="(item, index) in carouselItems"
+          v-for="(item, index) in carouselItems3"
           :key="index"
           :slideIndex="index + 1"
-          :refName="'slider3-carousel'"
+          :refName="'slider-carousel3'"
         >
-          {{ `Item ${index + 1}` }}
+          {{ item.title }}
         </nSliderCarouselItem>
       </nSliderCarousel>
     </section>
@@ -64,8 +65,8 @@
 </template>
 
 <script>
-import { nSliderCarousel, nSliderCarouselItem } from '@naked-ui/vue'
-// import { nSliderCarousel, nSliderCarouselItem } from '~/packages/@naked-ui/vue/src/main.js'
+// import { nSliderCarousel, nSliderCarouselItem } from '@naked-ui/vue'
+import { nSliderCarousel, nSliderCarouselItem } from '~/packages/@naked-ui/vue/src/main.js'
 
 export default {
   layout: 'test',
@@ -75,7 +76,20 @@ export default {
   },
   data () {
     return {
-      carouselItems: 16
+      carouselItems1: 16,
+      carouselItems2: 12,
+      carouselItems3: [
+        {
+          title: 'Slide 1'
+        },
+        {
+          title: 'Slide 2'
+        },
+        {
+          title: 'Slide 3'
+        },
+      ],
+      carouselItems4: 16
     }
   },
 }
