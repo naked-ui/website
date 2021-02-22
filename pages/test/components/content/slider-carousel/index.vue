@@ -49,7 +49,6 @@
         :refName="'slider-carousel3'"
         :loopItems="true"
         :infiniteScroll="true"
-        :slideIdEnabled="true"
       >
         <nSliderCarouselItem
           v-for="(item, index) in carouselItems3"
