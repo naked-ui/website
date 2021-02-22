@@ -4,9 +4,13 @@
     class="page"
   >
     <div class="hero">
+
       <Logo
         :size="68"
       />
+
+
+
       <div class="hero__cta">
         <Button
           class="hero__cta-link"
@@ -26,17 +30,50 @@
             class="icon-github"
           />
         </Button>
-        <!-- <Button
-          class="hero__cta-link"
-          link="https://npmjs.com/naked-ui"
-          target="_blank"
+      </div>
+
+      <div class="hero__install">
+        <!-- <h2 class="hero__install-heading">
+          Install from
+        </h2> -->
+        <div class="hero__install-switcher">
+          <nIcon @click.native="choosePackageManager('npm')">
+            <FontAwesomeIcon
+              :icon="faNpm"
+              class="icon-npm"
+            />
+          </nIcon>
+          <nIcon @click.native="choosePackageManager('yarn')">
+            <FontAwesomeIcon
+              :icon="faYarn"
+              class="icon-yarn"
+            />
+          </nIcon>
+          <nIcon @click.native="choosePackageManager('github')">
+            <FontAwesomeIcon
+              :icon="faGithub"
+              class="icon-github"
+            />
+          </nIcon>
+        </div>
+        <code
+          class="hero__install-code"
+          v-if="packageManager === 'npm'"
         >
-          Download from NPM
-          <FontAwesomeIcon
-            :icon="faNpm"
-            class="icon-npm"
-          />
-        </Button> -->
+          npm install @naked-ui/vue
+        </code>
+        <code
+          class="hero__install-code"
+          v-if="packageManager === 'yarn'"
+        >
+          yarn add @naked-ui/vue
+        </code>
+        <code
+          class="hero__install-code"
+          v-if="packageManager === 'github'"
+        >
+          git clone https://github.com/naked-ui/vue.git
+        </code>
       </div>
     </div>
   </div>
@@ -45,16 +82,36 @@
 <script>
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faNpm } from '@fortawesome/free-brands-svg-icons'
+import { faYarn } from '@fortawesome/free-brands-svg-icons'
+import Button from '../components/atoms/Button/Button.vue'
+import nIcon from '../packages/@naked-ui/vue/src/components/nIcon/nIcon.vue'
 
 export default {
+  components: {
+    Button,
+    nIcon
+  },
+  data () {
+    return {
+      packageManager: 'npm'
+    }
+  },
   computed: {
     faGithub () {
        return faGithub
     },
     faNpm () {
        return faNpm
+    },
+    faYarn () {
+       return faYarn
     }
-  } 
+  },
+  methods: {
+    choosePackageManager (provider) {
+      this.packageManager = provider
+    }
+  }
 }
 </script>
 
@@ -101,6 +158,36 @@ export default {
         }
       }
     }
+
+    &__install {
+      margin-top: 64px;
+      @include flex($place: center, $direction: column);
+
+      &-heading {
+        font-weight: 400;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      &-switcher {
+        @include grid-layout($cols: 3, $gap: 24px);
+      }
+      
+      &-code {
+        margin: 48px 0;
+        padding: 24px 32px;
+        background-color: var(--nui-color-feather-dark);
+        border-radius: 12px;
+        color: var(--nui-color-black);
+      }
+    }
+
+    .fa-npm,
+    .fa-yarn,
+    .fa-github {
+      font-size: 32px;
+    }
   }
   
   .logo {
@@ -119,8 +206,8 @@ export default {
       margin-left: 8px;
     }
 
-    .fa-npm {
-      transform: translateY(2px) !important;
+    .fa-github {
+      transform: translateY(1px) !important;
     }
   }
 }

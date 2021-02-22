@@ -81,7 +81,8 @@ export default {
     icons: {
       brands: [
         'faGithub',
-        'faNpm'
+        'faNpm',
+        'faYarn'
       ]
     }
   },
