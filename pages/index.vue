@@ -37,19 +37,28 @@
           Install from
         </h2> -->
         <div class="hero__install-switcher">
-          <nIcon @click.native="choosePackageManager('npm')">
+          <nIcon
+            :class="{'active' : packageManager === 'npm'}"
+            @click.native="choosePackageManager('npm')"
+          >
             <FontAwesomeIcon
               :icon="faNpm"
               class="icon-npm"
             />
           </nIcon>
-          <nIcon @click.native="choosePackageManager('yarn')">
+          <nIcon
+            :class="{'active' : packageManager === 'yarn'}"
+            @click.native="choosePackageManager('yarn')"
+          >
             <FontAwesomeIcon
               :icon="faYarn"
               class="icon-yarn"
             />
           </nIcon>
-          <nIcon @click.native="choosePackageManager('github')">
+          <nIcon
+            :class="{'active' : packageManager === 'github'}"
+            @click.native="choosePackageManager('github')"
+          >
             <FontAwesomeIcon
               :icon="faGithub"
               class="icon-github"
@@ -180,6 +189,14 @@ export default {
         background-color: var(--nui-color-feather-dark);
         border-radius: 12px;
         color: var(--nui-color-black);
+      }
+    }
+
+    .icon {
+      opacity: .4;
+
+      &.active {
+        opacity: 1;
       }
     }
 
