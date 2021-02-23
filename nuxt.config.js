@@ -34,7 +34,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'sxcss/reset.css',
-    // '@naked-ui/css',
+    '@naked-ui/vue/dist/index.css',
     '~/styles/fonts.css'
   ],
 

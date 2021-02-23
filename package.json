@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@naked-ui/css": "^0.0.7",
-    "@naked-ui/vue": "^0.1.12",
+    "@naked-ui/vue": "^0.1.14",
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/color-mode": "^2.0.3",
     "@nuxtjs/device": "^2.0.0",
