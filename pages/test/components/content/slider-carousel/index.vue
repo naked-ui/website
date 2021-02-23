@@ -88,6 +88,24 @@ export default {
         {
           title: 'Slide 3'
         },
+        {
+          title: 'Slide 4'
+        },
+        {
+          title: 'Slide 5'
+        },
+        {
+          title: 'Slide 6'
+        },
+        {
+          title: 'Slide 7'
+        },
+        {
+          title: 'Slide 8'
+        },
+        {
+          title: 'Slide 9'
+        },
       ],
       carouselItems4: 16
     }
@@ -109,10 +127,6 @@ export default {
       font: 700 24px/32px -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
       color: var(--nui-color-black) !important;
     }
-  }
-
-  &__pagination-button--active {
-    background-color: var(--nui-color-black) !important;
   }
 
   &__prev,
