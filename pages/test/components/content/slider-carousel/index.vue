@@ -5,56 +5,60 @@
       <h1>Slider Carousel</h1>
     </header>
 
-    <!-- <section class="test-page__content">
+    <section class="test-page__content">
       <nSliderCarousel
         :paginationItems="carouselItems1"
-        :refName="'slider1-carousel'"
+        refName="slider1"
         :infiniteScroll="false"
         :amountToScroll="2"
+        navigationAutohide
+        paginationAutohide
       >
-        <template v-slot:prev-button>Custom prev</template>
+        <!-- <template v-slot:prev-button>Custom prev</template> -->
         <nSliderCarouselItem
           v-for="(item, index) in carouselItems1"
           :key="index"
           :slideIndex="index + 1"
           :visibleItems="3"
-          :refName="'slider1-carousel'"
+          refName="slider1"
         >
-          {{ `Item ${index + 1}` }}
+          {{ item.title }}
         </nSliderCarouselItem>
-        <template v-slot:next-button>Custom next</template>
+        <!-- <template v-slot:next-button>Custom next</template> -->
       </nSliderCarousel>
     </section>
 
     <section class="test-page__content">
       <nSliderCarousel
         :paginationItems="carouselItems2"
-        :refName="'slider2-carousel'"
+        refName="slider2"
         navigationDisabled
+        autoplayEnabled
+        :autplayInterval="2000"
       >
         <nSliderCarouselItem
           v-for="(item, index) in carouselItems2"
           :key="index"
           :slideIndex="index + 1"
-          :refName="'slider2-carousel'"
+          refName="slider2"
         >
-          {{ `Item ${index + 1}` }}
+          {{ item.title }}
         </nSliderCarouselItem>
       </nSliderCarousel>
-    </section> -->
+    </section>
 
     <section class="test-page__content">
       <nSliderCarousel
         :paginationItems="carouselItems3"
-        :refName="'slider-carousel3'"
-        :loopItems="true"
-        :infiniteScroll="true"
+        refName="slider3"
+        loopEnabled
+        infiniteScroll
       >
         <nSliderCarouselItem
           v-for="(item, index) in carouselItems3"
           :key="index"
           :slideIndex="index + 1"
-          :refName="'slider-carousel3'"
+          refName="slider3"
         >
           {{ item.title }}
         </nSliderCarouselItem>
@@ -65,8 +69,8 @@
 </template>
 
 <script>
-import { nSliderCarousel, nSliderCarouselItem } from '@naked-ui/vue'
-// import { nSliderCarousel, nSliderCarouselItem } from '~/packages/@naked-ui/vue/src/main.js'
+// import { nSliderCarousel, nSliderCarouselItem } from '@naked-ui/vue'
+import { nSliderCarousel, nSliderCarouselItem } from '~/packages/@naked-ui/vue/src/main.js'
 
 export default {
   layout: 'test',
@@ -76,9 +80,7 @@ export default {
   },
   data () {
     return {
-      carouselItems1: 16,
-      carouselItems2: 12,
-      carouselItems3: [
+      carouselItems1: [
         {
           title: 'Slide 1'
         },
@@ -107,7 +109,34 @@ export default {
           title: 'Slide 9'
         },
       ],
-      carouselItems4: 16
+      carouselItems2: [
+        {
+          title: 'Slide 1'
+        },
+        {
+          title: 'Slide 2'
+        },
+        {
+          title: 'Slide 3'
+        }
+      ],
+      carouselItems3: [
+        {
+          title: 'Slide 1'
+        },
+        {
+          title: 'Slide 2'
+        },
+        {
+          title: 'Slide 3'
+        },
+        {
+          title: 'Slide 4'
+        },
+        {
+          title: 'Slide 5'
+        }
+      ]
     }
   },
 }
@@ -118,7 +147,7 @@ export default {
 
   &__item {
     @include flex($place: center);
-    background-color: var(--nui-color-grey);
+    background-color: var(--nui-color-feather-dark);
     border-radius: 12px;
 
     &-content {
@@ -131,8 +160,17 @@ export default {
 
   &__prev,
   &__next {
-    background-color: var(--nui-color-black);
-    color: var(--nui-color-white);
+    background-color: var(--nui-color-primary);
+    border-radius: 100%;
+    color: var(--nui-color-feather-dark);
+  }
+
+  &__prev {
+    left: 16px !important;
+  }
+
+  &__next {
+    right: 16px !important;
   }
 }
 </style>
