@@ -1091,10 +1091,10 @@
   resolved "https://registry.yarnpkg.com/@naked-ui/css/-/css-0.0.7.tgz#9ed0f74d6a7bdee3c407794359948be93d9ca19c"
   integrity sha512-nz7OMHOVrAF3TWCSgSZ4AgNi1bRUg0TfLq2JpHmws6PGs/LvrsQr2DwqwtIbjN1vAX4ZP1kPggoWgDey0tC7Hg==
 
-"@naked-ui/vue@^0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@naked-ui/vue/-/vue-0.1.18.tgz#fffd29e959d842579c0938ad8ce534dd1d042c60"
-  integrity sha512-kjQ9PJbVzcdKkjuIpKit0hVRO0nSCl99LJkd2RGCcpU4xrGySfeNsxXZgK7wdJJzBscxEIdK1jfYarur5NUQrg==
+"@naked-ui/vue@^0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@naked-ui/vue/-/vue-0.1.19.tgz#671b7c90d42112fde560fe00e1973775c6adb9fb"
+  integrity sha512-tc23gck04dzHNYC/2NkLZ5NPk0mpLBhJ3SfRyso6dwZR98/31WU/usIcW8OL1PCB/RZ6vP+g0gZ596xgNPSG/w==
   dependencies:
     babel-loader "^8.2.2"
     core-js "^3.8.1"

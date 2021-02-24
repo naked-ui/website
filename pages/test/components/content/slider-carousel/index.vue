@@ -14,7 +14,6 @@
         navigationAutohide
         paginationAutohide
       >
-        <!-- <template v-slot:prev-button>Custom prev</template> -->
         <nSliderCarouselItem
           v-for="(item, index) in carouselItems1"
           :key="index"
@@ -24,7 +23,6 @@
         >
           {{ item.title }}
         </nSliderCarouselItem>
-        <!-- <template v-slot:next-button>Custom next</template> -->
       </nSliderCarousel>
     </section>
 
@@ -53,6 +51,8 @@
         refName="slider3"
         loopEnabled
         infiniteScroll
+        navigationAutohide
+        paginationAutohide
       >
         <nSliderCarouselItem
           v-for="(item, index) in carouselItems3"
@@ -69,8 +69,8 @@
 </template>
 
 <script>
-// import { nSliderCarousel, nSliderCarouselItem } from '@naked-ui/vue'
-import { nSliderCarousel, nSliderCarouselItem } from '~/packages/@naked-ui/vue/src/main.js'
+import { nSliderCarousel, nSliderCarouselItem } from '@naked-ui/vue'
+// import { nSliderCarousel, nSliderCarouselItem } from '~/packages/@naked-ui/vue/src/main.js'
 
 export default {
   layout: 'test',
